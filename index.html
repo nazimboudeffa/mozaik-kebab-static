@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOZAIK Kebab</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      max-height: 75vh;
-      border-radius: 8px;
-    }
-    .back {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      color: #fff;
-      text-decoration: none;
-    }
-    .back:hover {
-      text-decoration: underline;
-    }
-    p {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17191d">
+<meta name="description" content="Mozaik — kebabs, tacos, burgers, sandwichs, paninis et assiettes. Découvrez notre carte.">
+<title>Mozaik — Kebab, Tacos & Burgers</title>
+<style>
+:root{--ink:#17191d;--ink2:#22252b;--cream:#f7f3eb;--muted:#c9c5bc;--orange:#ffb347;--red:#e65d45;--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:absolute;z-index:2;top:0;left:0;right:0;border-bottom:1px solid rgba(255,255,255,.2)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:Georgia,serif;font-size:30px;letter-spacing:.08em;font-weight:700}.brand span{color:var(--orange)}.navlinks{display:flex;gap:28px;color:#f1eee8;font-size:14px}.navlinks a:hover{color:var(--orange)}
+.hero{min-height:680px;display:grid;align-items:center;position:relative;isolation:isolate;background:#25262a;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,15,18,.92) 0%,rgba(13,15,18,.76) 46%,rgba(13,15,18,.18) 100%),url("images/facade.jpg") center 54%/cover;z-index:-1}.hero-content{padding:140px 0 80px;max-width:670px}.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;color:var(--orange)}.eyebrow:before{content:"";width:28px;height:2px;background:var(--orange)}h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin:22px 0}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--orange)}.hero p{max-width:510px;color:#e3e0da;font-size:18px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:5px;font-weight:800;font-size:14px;transition:.2s}.btn-primary{background:var(--orange);color:#17191d}.btn-primary:hover{background:#ffd08b;transform:translateY(-2px)}.btn-outline{border:1px solid rgba(255,255,255,.5)}.btn-outline:hover{border-color:var(--orange);color:var(--orange)}.hero-note{font-size:12px!important;color:#d0cbc2!important;margin-top:22px}
+.ticker{background:var(--orange);color:var(--ink);padding:13px 0;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;overflow:hidden}.ticker-inner{display:flex;justify-content:space-around;gap:22px;white-space:nowrap}
+section{padding:88px 0}.section-top{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}.kicker{color:var(--red);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:900}.section-top h2,.about h2{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 0}.section-top p{max-width:430px;color:#bdb9b2;margin:0}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.menu-card{background:var(--ink2);padding:26px;border:1px solid var(--line);border-radius:8px;min-height:225px;position:relative;overflow:hidden}.menu-card:after{content:"";position:absolute;width:100px;height:100px;border:1px solid rgba(255,179,71,.18);border-radius:50%;right:-35px;top:-35px}.menu-card .num{font-size:11px;color:var(--orange);font-weight:900;letter-spacing:.12em}.menu-card h3{font-size:23px;margin:14px 0 8px}.menu-card p{font-size:14px;color:#bdb9b2;margin:0 0 20px}.price{font-size:14px;font-weight:900;color:var(--orange)}.menu-card.featured{background:linear-gradient(145deg,#3a2922,#24252a);border-color:rgba(255,179,71,.4)}.menu-foot{margin-top:20px;color:#bdb9b2;font-size:12px}
+.about{background:var(--cream);color:var(--ink)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.about-photo{position:relative}.about-photo img{display:block;width:100%;height:430px;object-fit:cover;border-radius:8px;box-shadow:16px 16px 0 var(--orange)}.about-copy p{color:#55534e}.about-copy .kicker{color:#bb4b36}.features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.feature{border-top:1px solid #d9d2c7;padding-top:13px;font-weight:800}.feature small{display:block;color:#777067;font-weight:500;margin-top:4px}
+.card-menu{background:#1d2025}.menu-photo{width:100%;max-height:680px;object-fit:contain;object-position:center;background:#111;border:1px solid var(--line);border-radius:8px;display:block}.menu-photo-note{font-size:12px;color:#bdb9b2;margin:14px 0 0}.menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}.menu-list article{padding:24px;background:#26292f;border-radius:7px}.menu-list h3{margin:0 0 15px;font-size:20px}.dish{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:14px}.dish:last-child{border:0}.dish span:last-child{color:var(--orange);font-weight:800;white-space:nowrap}.fineprint{color:#bdb9b2;font-size:12px;margin-top:18px}
+.visit{background:#f1ede5;color:var(--ink)}.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}.visit-box{background:#fff;padding:32px;border-radius:8px}.visit-box h3{margin:0 0 12px;font-size:24px}.visit-box p{color:#65615b}.visit-box .btn{margin-top:10px}.photo-small{height:100%;min-height:280px;width:100%;object-fit:cover;border-radius:8px}
+footer{padding:28px 0;background:#111316;color:#a9a69f;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-row strong{color:white;letter-spacing:.12em}
+@media(max-width:760px){.nav{height:70px}.navlinks{gap:14px;font-size:12px}.brand{font-size:25px}.hero{min-height:630px}.hero:before{background:linear-gradient(90deg,rgba(13,15,18,.91),rgba(13,15,18,.55)),url("images/facade.jpg") center/cover}.hero-content{padding-top:125px}.hero p{font-size:16px}.section-top{display:block}.section-top p{margin-top:16px}.menu-grid{grid-template-columns:1fr 1fr}.about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}.about-photo img{height:320px}.menu-list{grid-template-columns:1fr}.photo-small{max-height:300px}.ticker-inner{justify-content:flex-start}}
+@media(max-width:440px){.wrap{width:calc(100% - 28px)}.navlinks{gap:10px}.navlinks a:nth-child(2){display:none}.menu-grid{grid-template-columns:1fr}.menu-card{min-height:0}.features{grid-template-columns:1fr 1fr}.hero h1{font-size:48px}.actions .btn{width:100%}section{padding:64px 0}}
+</style>
 </head>
 <body>
-  <a class="back" href="https://roanne.info">← Revenir sur roanne.info</a>
-  <img src="images/facade.jpg" alt="Façade du kebab MOZAIK">
-  <img src="images/panneau.jpg" alt="Panneau du kebab MOZAIK">
-  <p>Site Web en construction</p>
-</body>
-</html>
+<header><div class="wrap nav"><a class="brand" href="#accueil">MO<span>Z</span>AIK</a><nav class="navlinks" aria-label="Navigation principale"><a href="#carte">La carte</a><a href="#histoire">Le lieu</a><a href="#venir">Nous trouver</a></nav></div></header>
+<main>
+<section class="hero" id="accueil"><div class="wrap"><div class="hero-content"><div class="eyebrow">Kebab · Tacos · Burgers</div><h1>La faim a<br>trouvé son <em>spot.</em></h1><p>Envie d’un kebab généreux, d’un tacos bien garni ou d’un sandwich gourmand ? Passez chez Mozaik et trouvez votre prochain favori.</p><div class="actions"><a class="btn btn-primary" href="#carte">Découvrir la carte <span aria-hidden="true">&nbsp;↘</span></a><a class="btn btn-outline" href="#venir">Voir le restaurant</a></div><p class="hero-note">Sur place · À emporter · Selon les disponibilités du restaurant</p></div></div></section>
+<div class="ticker"><div class="wrap ticker-inner"><span>🔥 KEBABS</span><span>✳ TACOS</span><span>🍔 BURGERS</span><span>🥙 PANINIS</span><span>🥗 SALADES</span></div></div>
+<section id="selection"><div class="wrap"><div class="section-top"><div><div class="kicker">À chacun son envie</div><h2>Les incontournables</h2></div><p>Du sandwich classique au tacos bien garni, composez votre pause gourmande selon vos envies.</p></div><div class="menu-grid">
+<article class="menu-card featured"><div class="num">01 / LE CLASSIQUE</div><h3>Kebabs & sandwichs</h3><p>Pain ou galette, viande au choix et garniture fraîche pour un grand classique.</p><a class="price" href="#carte">Voir les formats ↗</a></article>
+<article class="menu-card"><div class="num">02 / BIEN GARNI</div><h3>Tacos</h3><p>Choisissez votre viande et votre format : simple, double ou triple.</p><a class="price" href="#carte">Dès 13,00 € ↗</a></article>
+<article class="menu-card"><div class="num">03 / À PARTAGER… OU PAS</div><h3>Assiettes & nachos</h3><p>Une assiette complète ou des nachos gratinés pour les grosses faims.</p><a class="price" href="#carte">Dès 9,00 € ↗</a></article>
+</div></div></section>
+<section class="about" id="histoire"><div class="wrap about-grid"><div class="about-photo"><img src="images/facade.jpg" alt="Façade du restaurant Mozaik"></div><div class="about-copy"><div class="kicker">Bienvenue chez Mozaik</div><h2>Simple, généreux,<br>et plein de goût.</h2><p>Mozaik, c’est une adresse pour les envies de street-food : kebabs, tacos, paninis, salades et assiettes. Installez-vous en terrasse quand il fait beau ou passez prendre votre commande.</p><p>La carte rassemble des classiques pour les petites faims comme pour les appétits bien réveillés.</p><div class="features"><div class="feature">🥙 Les classiques<small>Kebab, sandwich, galette</small></div><div class="feature">🌯 Les tacos<small>Simple, double, triple</small></div><div class="feature">🥗 Aussi plus frais<small>Salades et accompagnements</small></div><div class="feature">🍨 Pour finir<small>Boissons et desserts</small></div></div></div></div></section>
+<section class="card-menu" id="carte"><div class="wrap"><div class="section-top"><div><div class="kicker">À vous de choisir</div><h2>La carte Mozaik</h2></div><p>Retrouvez ci-dessous une sélection des plats et prix visibles sur le panneau du restaurant. Les prix peuvent évoluer.</p></div>
+<div class="menu-grid">
+<article class="menu-card"><div class="num">SANDWICHS</div><h3>Kebab</h3><p>Normal, géant ou en galette.</p><div class="dish"><span>Normal — seul</span><span>8,50 €</span></div><div class="dish"><span>Normal — menu</span><span>12,00 €</span></div><div class="dish"><span>Géant — seul</span><span>14,50 €</span></div><div class="dish"><span>Géant — menu</span><span>18,00 €</span></div><div class="dish"><span>Galette — seul</span><span>8,50 €</span></div><div class="dish"><span>Galette — menu</span><span>12,00 €</span></div></article>
+<article class="menu-card featured"><div class="num">TACOS</div><h3>Composez votre tacos</h3><p>Viande au choix selon la carte affichée.</p><div class="dish"><span>Simple — 1 viande</span><span>13,00 €</span></div><div class="dish"><span>Double — 2 viandes</span><span>15,00 €</span></div><div class="dish"><span>Triple — 3 viandes</span><span>17,00 €</span></div></article>
+<article class="menu-card"><div class="num">ASSIETTES</div><h3>Les assiettes</h3><p>Viande, salade, boulgour, frites, tomates cerises et oignons rouges.</p><div class="dish"><span>Simple</span><span>14,50 €</span></div><div class="dish"><span>Double</span><span>17,50 €</span></div></article>
+<article class="menu-card"><div class="num">NACHOS</div><h3>Gratinés</h3><p>Frites, chips, sauce fromagère, viande au choix et votre sauce préférée.</p><div class="dish"><span>Simple</span><span>9,00 €</span></div><div class="dish"><span>Double</span><span>12,50 €</span></div></article>
+<article class="menu-card"><div class="num">PANINIS</div><h3>Les paninis</h3><p>Kebab, poulet, steak, merguez, saumon ou 3 fromages.</p><div class="dish"><span>Kebab / poulet / steak</span><span>10,00 €</span></div><div class="dish"><span>Merguez / saumon</span><span>10,00 €</span></div><div class="dish"><span>3 fromages</span><span>9,00 €</span></div></article>
+<article class="menu-card"><div class="num">SALADES</div><h3>Fraîcheur</h3><p>Des recettes pour une pause plus fraîche.</p><div class="dish"><span>Thon</span><span>9,00 €</span></div><div class="dish"><span>Maison</span><span>9,00 €</span></div><div class="dish"><span>Mozaik</span><span>10,00 €</span></div><div class="dish"><span>Pacifique</span><span>10,00 €</span></div></article>
+</div>
+<div class="menu-list"><article><h3>Boissons & desserts</h3><p>Une sélection de boissons fraîches et de douceurs est proposée au restaurant. Demandez la disponibilité du jour.</p></article><article><h3>Le menu enfant</h3><p>Une formule enfant est affichée sur le panneau du restaurant. Renseignez-vous sur la composition et les options disponibles.</p></article></div>
+<p class="fineprint">Les prix ci-dessus sont retranscrits à partir de la photo du panneau et peuvent comporter des erreurs de lecture. La carte affichée sur place fait foi. Allergènes et options : demandez conseil à l’équipe.</p>
+<details style="margin-top:28px"><summary style="cursor:pointer;color:var(--orange);font-weight:800">Voir la photo complète du panneau-menu</summary><img class="menu-photo" style="margin-top:16px" src="images/panneau.jpg" alt="Photo du panneau de menu Mozaik"></details>
+</div></section>
+<section class="visit" id="venir"><div class="wrap visit-grid"><div class="visit-box"><div class="kicker">On vous attend</div><h3>Une petite faim ?</h3><p>Retrouvez Mozaik en personne et consultez la carte sur place. Les informations pratiques (adresse exacte, horaires et téléphone) restent à ajouter pour que vos clients puissent vous contacter facilement.</p><a class="btn btn-primary" href="#carte">Revoir la carte ↗</a></div><img class="photo-small" src="images/facade.jpg" alt="Entrée et terrasse du restaurant Mozaik"></div></section>
+</main>
+<footer><div class="wrap footer-row"><strong>MOZAIK</strong><span>Kebab · Tacos · Burgers · Paninis</span><span>© <span id="year">2026</span> Mozaik — Site de présentation</span></div></footer>
+</body></html>
